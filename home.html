@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/main.css" type="text/css" rel="stylesheet" />
+    <title>StackOverflow-lite</title>
+  </head>
+
+  <body>
+    <div class="sidenav">
+      <a href="#home">Home</a>
+      <a href="#profile">Profile</a>
+      <a href="#sign out">Sign out</a>
+    </div>
+    <div class="header">Stackoverflow-lite</div>
+    <div class="container">
+      <form method="post" id="form-post">
+        <textarea class="textarea-title" id="question-title" cols="100" rows="5" placeholder="Title" required oninvalid="this.setCustomValidity(" Please enter a valid question title")"></textarea>
+        <textarea class="textarea" id="question-body" cols="100" rows="5" placeholder="Body" required oninvalid="this.setCustomValidity(" Please enter a valid question body")"></textarea>
+        <br>
+        <input type="submit" value="Post" class="submit">
+      </form>
+      <div id="div-question"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="static/js/main.js"></script>
+  <script type="text/javascript" src="static/js/home.js"></script>
+
+</html>
