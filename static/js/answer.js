@@ -56,9 +56,10 @@ function makeQuestion(question) {
                         <td class="question-body">${question.body}</td>
                     </tr>
                     <tr>
-                        <td>
-                            <button type="button" onclick="alert("Edit!")">Edit</button>
-                            <button type="button" onclick="alert("Delete!")">Delete</button>
+                      <td></td>
+                        <td align="right">
+                            <button align="right" type="button" onclick="alert("Edit!")" class="button-white"><i class="fas fa-edit"></i> Edit</button>
+                            <button align="right" type="button" onclick="alert("Delete!")" class="button-white"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                         </td>
                     </tr>
                 </table>
@@ -85,7 +86,10 @@ function makeAnswer(answer) {
                             <td class="answer-body">${answer.body}</td>
                         </tr>
                         <tr>
-                            <td><button type="button" onclick="alert("Edit!")">Edit</button></td>
+                            <td></td>
+                            <td align="right">
+                              <button align="right" type="button" onclick="confirm("edit")" class="button-white"><i class="fas fa-edit"></i> Edit</button>
+                            </td>
                         </tr>
                     </table>
                 </div>

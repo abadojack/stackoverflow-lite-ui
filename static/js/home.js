@@ -1,6 +1,11 @@
 /*jslint devel: true */
 window.onload = function() {
+  console.log(window.localStorage.getItem("stackoverflow-lite-token"));
+  if(window.localStorage.getItem("stackoverflow-lite-token") === null) {
+    window.location.replace("login.html");
+  } else {
     getQuestions();
+  }
 };
 
 document.getElementById("form-post").addEventListener("submit", function (e) {
@@ -114,4 +119,9 @@ function makeElement(question) {
 function openAnswers(questionID) {
     localStorage.setItem("question_id", questionID);
     window.location.href = "answers.html";
+}
+
+function signout() {
+  localStorage.removeItem("question_id");
+  localStorage.removeItem("stackoverflow-lite-token");
 }
